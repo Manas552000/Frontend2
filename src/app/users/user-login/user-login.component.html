@@ -1,0 +1,28 @@
+<div class="row p-4">
+    <div class="col-6 m-auto">
+    <div class="card m-auto">
+      <div class="card-header">
+        Login
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group col-12">
+            <label for="email" class="form-label" >Email</label>
+            <input [(ngModel)]="userEmail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel [ngModelOptions]="{standalone: true}" type="text" class="form-control"title="Invalid email address" required>
+            
+          </div>
+  
+          <div class="form-group col-12">
+            <label for="passwrod" class="form-label">Password</label>
+            <input [(ngModel)]="userPassword" ngModel [ngModelOptions]="{standalone: true}" type="password" pattern="[a-zA-Z]{1,}" class="form-control" required >
+          </div>
+
+          <div class="form-group col-12">
+            <button (click)="onSubmit()" type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+
